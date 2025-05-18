@@ -434,7 +434,7 @@ const ReviewsInterface = () => {
               <Link to="/w" className="block py-4 px-3 text-gray-600 hover:text-gray-900">
                 Widgets
               </Link>
-              <Link to="/listings" className="block py-4 px-3 text-gray-600 hover:text-gray-900">
+              <Link to="/list" className="block py-4 px-3 text-gray-600 hover:text-gray-900">
                 Listings
               </Link>
               <Link to="/s" className="block py-4 px-3 text-gray-600 hover:text-gray-900">

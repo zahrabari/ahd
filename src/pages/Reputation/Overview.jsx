@@ -129,7 +129,7 @@ const monthlyData = [
     Widgets
   </Link>
 
-  <Link to="/listings" className="block py-4 px-3 text-gray-600 hover:text-gray-900">
+  <Link to="/list" className="block py-4 px-3 text-gray-600 hover:text-gray-900">
     Listings
   </Link>
 

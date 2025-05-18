@@ -333,7 +333,7 @@ export default function ReputationDashboard(props) {
     { name: "Requests", path: "/re" },
     { name: "Reviews", path: "/rev" },
     { name: "Widgets", path: "/w" },
-    { name: "Listings", path: "/listings" },
+    { name: "Listings", path: "/list" },
     { name: "Settings", path: "/s" },
   ];
 
