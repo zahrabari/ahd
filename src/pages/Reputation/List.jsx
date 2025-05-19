@@ -651,14 +651,16 @@ export default function ListingManagement() {
   }, [slides.length, showScanResults]);
 
   // Navigation items
-  const navItems = [
-    { name: "Overview", path: "/Ov" },
-    { name: "Requests", path: "/re" },
-    { name: "Reviews", path: "/rev" },
-    { name: "Widgets", path: "/w" },
-    { name: "Listings", path: "/lii" },
-    { name: "Settings", path: "/s" },
-  ]
+ const navItems = [
+  { name: "Overview", path: "/Overview" },
+  { name: "Requests", path: "/Requests" },
+  { name: "Reviews", path: "/Reviews" },
+  { name: "Widgets", path: "/Widgets" },
+  { name: "Listings", path: "/Listings" },
+  { name: "Settings", path: "/Settings" }
+];
+
+
   // Handle navigation click
   const handleNavClick = (navId) => {
     setActiveNav(navId);

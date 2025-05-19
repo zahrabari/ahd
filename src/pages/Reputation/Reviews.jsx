@@ -420,24 +420,24 @@ const ReviewsInterface = () => {
           <div className="flex items-center">
             <h1 className="text-xl font-semibold py-4 mr-8">Reputation</h1>
             <nav className="flex space-x-4">
-              <Link to="/Ov" className="block py-4 px-3 text-gray-600 hover:text-gray-900">
+              <Link to="/Overview" className="block py-4 px-3 text-gray-600 hover:text-gray-900">
                 Overview
               </Link>
-              <Link to="/re" className="block py-4 px-3 text-gray-600 hover:text-gray-900">
+              <Link to="/Requests" className="block py-4 px-3 text-gray-600 hover:text-gray-900">
                 Requests
               </Link>
               <div className="border-b-2 border-blue-500">
-                <Link to="/rev" className="block py-4 px-3 text-blue-500 font-medium">
+                <Link to="/Reviews" className="block py-4 px-3 text-blue-500 font-medium">
                   Reviews
                 </Link>
               </div>
-              <Link to="/w" className="block py-4 px-3 text-gray-600 hover:text-gray-900">
+              <Link to="/Widgets" className="block py-4 px-3 text-gray-600 hover:text-gray-900">
                 Widgets
               </Link>
-              <Link to="/list" className="block py-4 px-3 text-gray-600 hover:text-gray-900">
+              <Link to="/Listings" className="block py-4 px-3 text-gray-600 hover:text-gray-900">
                 Listings
               </Link>
-              <Link to="/s" className="block py-4 px-3 text-gray-600 hover:text-gray-900">
+              <Link to="/Settings" className="block py-4 px-3 text-gray-600 hover:text-gray-900">
                 Settings
               </Link>
             </nav>

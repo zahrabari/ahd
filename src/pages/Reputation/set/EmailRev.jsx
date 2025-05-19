@@ -288,23 +288,23 @@ export default function EmailReviewRequests() {
   const [isCreateNewModalOpen, setIsCreateNewModalOpen] = useState(false)
 
   const navItems = [
-    { name: "Overview", path: "/Ov" },
-    { name: "Requests", path: "/re" },
-    { name: "Reviews", path: "/rev" },
-    { name: "Widgets", path: "/w" },
-    { name: "Listings", path: "/listings" },
-    { name: "Settings", path: "/s" },
+    { name: "Overview", path: "/Overview" },
+    { name: "Requests", path: "/Requests" },
+    { name: "Reviews", path: "/Reviews" },
+    { name: "Widgets", path: "/Widgets" },
+    { name: "Listings", path: "/Listings" },
+    { name: "Settings", path: "/Settings" },
   ]
 
   const sidebarItems = [
-    { name: "Reviews AI", path: "/s" },
-    { name: "Review Link", path: "/l" },
-    { name: "SMS Review Requests", path: "/m" },
-    { name: "Email Review Requests", path: "/e" },
-    { name: "WhatsApp Review Requests", path: "/h" },
-    { name: "Reviews QR", path: "r" },
-    { name: "Spam Reviews", path: "/p" },
-    { name: "Integrations", path: "/i" },
+    { name: "Reviews AI", path: "/Settings" },
+    { name: "Review Link", path: "/Reviewlink" },
+    { name: "SMS Review Requests", path: "/Smss" },
+    { name: "Email Review Requests", path: "/EmailRev" },
+    { name: "WhatsApp Review Requests", path: "/WhatsApp" },
+    { name: "Reviews QR", path: "/Review" },
+    { name: "Spam Reviews", path: "/spam" },
+    { name: "Integrations", path: "/Integrations" },
   ]
 
   // Template data

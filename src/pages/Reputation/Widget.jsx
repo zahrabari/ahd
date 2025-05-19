@@ -345,29 +345,27 @@ export default function ReputationDashboard() {
           <div className="flex items-center">
             <h1 className="text-xl font-semibold py-4 mr-8">Reputation</h1>
             <nav className="flex space-x-4">
-           
-                <Link to="/Ov" className="block py-4 px-3 text-gray-600 hover:text-gray-900">
-                  Overview
-                </Link>
-              
+              <Link to="/Overview" className="block py-4 px-3 text-gray-600 hover:text-gray-900">
+                Overview
+              </Link>
 
-              <Link to="/re" className="block py-4 px-3 text-gray-600 hover:text-gray-900">
+              <Link to="/Requests" className="block py-4 px-3 text-gray-600 hover:text-gray-900">
                 Requests
               </Link>
 
-              <Link to="/rev" className="block py-4 px-3 text-gray-600 hover:text-gray-900">
+              <Link to="/Reviews" className="block py-4 px-3 text-gray-600 hover:text-gray-900">
                 Reviews
               </Link>
               <div className="border-b-2 border-blue-500">
-              <Link to="/w" className="block py-4 px-3 text-blue-500 font-medium">
-                Widgets
-              </Link>
+                <Link to="/Widgets" className="block py-4 px-3 text-blue-500 font-medium">
+                  Widgets
+                </Link>
               </div>
-              <Link to="/list" className="block py-4 px-3 text-gray-600 hover:text-gray-900">
+              <Link to="/Listings" className="block py-4 px-3 text-gray-600 hover:text-gray-900">
                 Listings
               </Link>
 
-              <Link to="/s" className="block py-4 px-3 text-gray-600 hover:text-gray-900">
+              <Link to="/Settings" className="block py-4 px-3 text-gray-600 hover:text-gray-900">
                 Settings
               </Link>
             </nav>
@@ -1395,38 +1393,44 @@ export default function ReputationDashboard() {
             </div>
 
             <div className="p-4 flex-1 overflow-y-auto">
-              <div className="flex flex-col">
-                <div className="border border-gray-200 rounded-lg p-8 mb-4 flex items-center justify-center flex-col">
-                  <button
-                    className="flex flex-col items-center justify-center w-full h-full"
-                    onClick={handleCreateNewClick}
-                  >
-                    <Plus size={24} className="text-gray-800 mb-2" />
-                    <span className="text-gray-800 font-medium">Create new</span>
-                  </button>
-                </div>
+              {activeRightTab === "Saved Widgets" ? (
+                <div className="flex flex-col">
+                  <div className="border border-gray-200 rounded-lg p-8 mb-4 flex items-center justify-center flex-col">
+                    <button
+                      className="flex flex-col items-center justify-center w-full h-full"
+                      onClick={handleCreateNewClick}
+                    >
+                      <Plus size={24} className="text-gray-800 mb-2" />
+                      <span className="text-gray-800 font-medium">Create new</span>
+                    </button>
+                  </div>
 
-                <div
-                  className={`border rounded-lg p-4 mb-4 relative ${selectedWidget === "default" ? "border-blue-100 bg-blue-50" : "border-gray-200"}`}
-                  onClick={() => handleWidgetSelection("default")}
-                >
-                  <div className="absolute top-2 right-2 bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-xs font-medium">
-                    DEFAULT
-                  </div>
-                  <div className="h-24 flex items-center justify-center">
-                    <div className="text-blue-500">
-                      <svg className="w-12 h-12" viewBox="0 0 24 24" fill="none">
-                        <path
-                          d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"
-                          fill="currentColor"
-                          stroke="currentColor"
-                        />
-                      </svg>
+                  <div
+                    className={`border rounded-lg p-4 mb-4 relative ${selectedWidget === "default" ? "border-blue-100 bg-blue-50" : "border-gray-200"}`}
+                    onClick={() => handleWidgetSelection("default")}
+                  >
+                    <div className="absolute top-2 right-2 bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-xs font-medium">
+                      DEFAULT
                     </div>
+                    <div className="h-24 flex items-center justify-center">
+                      <div className="text-blue-500">
+                        <svg className="w-12 h-12" viewBox="0 0 24 24" fill="none">
+                          <path
+                            d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"
+                            fill="currentColor"
+                            stroke="currentColor"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                    <div className="text-center mt-2 text-gray-600">Untitled</div>
                   </div>
-                  <div className="text-center mt-2 text-gray-600">Untitled</div>
                 </div>
-              </div>
+              ) : (
+                <div className="flex items-center justify-center h-full text-gray-600">
+                  No Templates available currently
+                </div>
+              )}
             </div>
 
             <div className="p-4 border-t border-gray-200 sticky bottom-0 bg-white">
